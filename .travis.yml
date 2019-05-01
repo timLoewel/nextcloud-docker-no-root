@@ -1,12 +1,8 @@
 language: bash
 services: docker
 
-branches:
-  only:
-    - master
-
 install:
-  - git clone https://github.com/docker-library/official-images.git ~/official-images
+  - git clone -b nc-tests https://github.com/J0WI/official-images.git ~/official-images
 
 before_script:
   - env | sort
