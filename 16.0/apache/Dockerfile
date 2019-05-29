@@ -142,6 +142,8 @@ RUN set -ex; \
 
 COPY *.sh upgrade.exclude /
 COPY config/* /usr/src/nextcloud/config/
+COPY apacheConfig/ports.conf /etc/apache2/
+COPY apacheConfig/sites-enabled/000-default.conf /etc/apache2/sites-enabled/
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["apache2-foreground"]
