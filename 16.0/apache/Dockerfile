@@ -144,6 +144,6 @@ COPY *.sh upgrade.exclude /
 COPY config/* /usr/src/nextcloud/config/
 COPY apacheConfig/ports.conf /etc/apache2/
 COPY apacheConfig/sites-enabled/000-default.conf /etc/apache2/sites-enabled/
-
+EXPOSE 8080
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["apache2-foreground"]
